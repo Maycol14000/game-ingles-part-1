@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <button id="toggle-view-btn">Cambiar a Móvil</button>
+
+    <div id="app-container" class="pc-mode">
+
+        <!-- Pantalla: Login -->
+        <div id="login-screen" class="screen active">
+            <h1>English Adventure!</h1>
+            <p>Elige tu personaje:</p>
+
+            <div class="avatar-selection">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Felix&backgroundColor=b6e3f4" class="avatar-option active-avatar" data-avatar="Felix" alt="Avatar Felix" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Crect width=%2780%27 height=%2780%27 fill=%27%23b6e3f4%27/%3E%3Crect x=%2718%27 y=%2722%27 width=%2744%27 height=%2738%27 rx=%278%27 fill=%27%23fff%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2732%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Ccircle cx=%2748%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Crect x=%2730%27 y=%2750%27 width=%2720%27 height=%274%27 rx=%272%27 fill=%27%23333%27/%3E%3Cline x1=%2740%27 y1=%2722%27 x2=%2740%27 y2=%2712%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2740%27 cy=%2710%27 r=%274%27 fill=%27%23FF5722%27/%3E%3C/svg%3E'">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Aneka&backgroundColor=ffdfbf" class="avatar-option" data-avatar="Aneka" alt="Avatar Aneka" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Crect width=%2780%27 height=%2780%27 fill=%27%23b6e3f4%27/%3E%3Crect x=%2718%27 y=%2722%27 width=%2744%27 height=%2738%27 rx=%278%27 fill=%27%23fff%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2732%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Ccircle cx=%2748%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Crect x=%2730%27 y=%2750%27 width=%2720%27 height=%274%27 rx=%272%27 fill=%27%23333%27/%3E%3Cline x1=%2740%27 y1=%2722%27 x2=%2740%27 y2=%2712%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2740%27 cy=%2710%27 r=%274%27 fill=%27%23FF5722%27/%3E%3C/svg%3E'">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Mimi&backgroundColor=c0aede" class="avatar-option" data-avatar="Mimi" alt="Avatar Mimi" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Crect width=%2780%27 height=%2780%27 fill=%27%23b6e3f4%27/%3E%3Crect x=%2718%27 y=%2722%27 width=%2744%27 height=%2738%27 rx=%278%27 fill=%27%23fff%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2732%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Ccircle cx=%2748%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Crect x=%2730%27 y=%2750%27 width=%2720%27 height=%274%27 rx=%272%27 fill=%27%23333%27/%3E%3Cline x1=%2740%27 y1=%2722%27 x2=%2740%27 y2=%2712%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2740%27 cy=%2710%27 r=%274%27 fill=%27%23FF5722%27/%3E%3C/svg%3E'">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Buster&backgroundColor=d1d4f9" class="avatar-option" data-avatar="Buster" alt="Avatar Buster" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Crect width=%2780%27 height=%2780%27 fill=%27%23b6e3f4%27/%3E%3Crect x=%2718%27 y=%2722%27 width=%2744%27 height=%2738%27 rx=%278%27 fill=%27%23fff%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2732%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Ccircle cx=%2748%27 cy=%2738%27 r=%275%27 fill=%27%23333%27/%3E%3Crect x=%2730%27 y=%2750%27 width=%2720%27 height=%274%27 rx=%272%27 fill=%27%23333%27/%3E%3Cline x1=%2740%27 y1=%2722%27 x2=%2740%27 y2=%2712%27 stroke=%27%23333%27 stroke-width=%273%27/%3E%3Ccircle cx=%2740%27 cy=%2710%27 r=%274%27 fill=%27%23FF5722%27/%3E%3C/svg%3E'">
+            </div>
+
+            <input type="text" id="username" maxlength="15" placeholder="Escribe tu nombre..." autocomplete="off">
+            <button id="btn-start" class="btn-primary">¡Iniciar!</button>
+        </div>
+
+        <!-- Pantalla: Aplicación Principal -->
+        <div id="main-app-screen" class="screen">
+
+            <div class="user-profile-bar">
+                <img id="user-avatar-display" src="" alt="Avatar">
+                <div class="profile-info">
+                    <div class="profile-top">
+                        <span id="welcome-text">Jugador</span>
+                        <span id="stats-text" class="stats"></span>
+                    </div>
+                    <div class="xp-bar"><div id="xp-fill"></div></div>
+                    <small id="xp-text"></small>
+                </div>
+                <button id="btn-logout" class="nav-btn-small">Cambiar jugador</button>
+            </div>
+
+            <nav class="main-navbar">
+                <button class="nav-btn active" data-target="seccion-niveles">Niveles</button>
+                <button class="nav-btn" data-target="seccion-minijuegos">Minijuegos</button>
+                <button class="nav-btn" data-target="seccion-videos">Videos</button>
+                <button class="nav-btn" data-target="seccion-ranking">Ranking</button>
+            </nav>
+
+            <div class="sections-container">
+
+                <!-- Sección 1: Niveles de Inglés -->
+                <div id="seccion-niveles" class="app-section active-section">
+                    <h2>Ruta de Aprendizaje</h2>
+                    <div class="level-categories">
+                        <button class="btn-category btn-green" data-category="Inicial">Inicial</button>
+                        <button class="btn-category btn-blue" data-category="Intermedio">Intermedio</button>
+                        <button class="btn-category btn-red" data-category="Avanzado">Avanzado</button>
+                    </div>
+
+                    <h3 id="titulo-categoria-actual" class="hidden"></h3>
+                    <div id="grid-50-niveles" class="levels-grid"></div>
+                </div>
+
+                <!-- Sección 2: Minijuegos -->
+                <div id="seccion-minijuegos" class="app-section">
+                    <h2>Zona Arcade</h2>
+
+                    <div class="minigames-list">
+                        <div class="minigame-card" id="abrir-graphwar">
+                            <h3>Space Path </h3>
+                            <p>Guía la nave escribiendo o usando direcciones en inglés.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card" id="abrir-wordmatch">
+                            <h3>Word Match </h3>
+                            <p>Encuentra los pares inglés ↔ español en el menor tiempo posible.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card" id="abrir-bubblepop">
+                            <h3>Bubble Pop </h3>
+                            <p>Explota la burbuja con la traducción correcta antes de que escape.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card" id="abrir-finalsentence">
+                            <h3>Final Sentence</h3>
+                            <p>Completa la oración antes de que se acabe el tiempo.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card" id="abrir-listening">
+                            <h3>Listening Quiz</h3>
+                            <p>Escucha la palabra en inglés y elige la respuesta correcta.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card" id="abrir-hangman">
+                            <h3>Hangman</h3>
+                            <p>Adivina la palabra en inglés letra por letra.</p>
+                            <button class="btn-primary">Jugar ahora</button>
+                        </div>
+
+                        <div class="minigame-card locked">
+                            <h3>Próximamente </h3>
+                            <p>Nuevo juego en desarrollo...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Ranking -->
+                <div id="seccion-ranking" class="app-section">
+                    <h2>Clasificación</h2>
+                    <table class="rk-table">
+                        <thead><tr><th>#</th><th>Jugador</th><th>Nivel</th><th>XP</th><th>Niveles</th></tr></thead>
+                        <tbody id="ranking-body"></tbody>
+                    </table>
+                </div>
+
+                <!-- Sección: Videos -->
+                <div id="seccion-videos" class="app-section">
+                    <h2>Cine de Inglés </h2>
+                    <div class="video-gallery">
+                        <div class="video-card">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjZYCeFJNGU?si=vjNhjY-zZ-ipz2SG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h4>CONVERSACIÓN EN INGLÉS - NIÑOS</h4>
+
+                        </div>
+                        <div class="video-card">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3ZqYd6WSMYg?si=ndEETc5Drbd9xqf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h4>Vocabulario Espacial</h4>
+                        </div>
+                        <div class="video-card">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/km63lriW7Mo?si=0AtXcx1L94UT_e5z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h4>Sistema Solar</h4>
+                        </div>
+                         <div class="video-card">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TZ6eC2EMstQ?si=CJIqK8XuPPQhWt_p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h4>La Familia</h4>
+                        </div>
+                         <div class="video-card">
+                           <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=117404491450249&bvid=BV1VeHQ6tEaS&cid=42564652953&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                            <h4>Vocabulario de la Familia</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pantalla: Ejercicios de un nivel -->
+        <div id="level-screen" class="screen">
+            <div class="navbar-game">
+                <h2 id="lvl-title">Nivel</h2>
+                <button id="btn-exit-level" class="nav-btn-small">Salir</button>
+            </div>
+            <div class="progress"><div id="lvl-bar"></div></div>
+            <p id="lvl-count"></p>
+            <h3 id="lvl-prompt"></h3>
+            <div id="lvl-answer"></div>
+            <p id="lvl-feedback" class="feedback"></p>
+            <button id="btn-next" class="btn-primary hidden">Siguiente</button>
+        </div>
+
+        <!-- Ventana de recompensa / resultado -->
+        <div id="reward-modal" class="modal hidden">
+            <div class="modal-box">
+                <div id="rw-icon" class="big"></div>
+                <h2 id="rw-title"></h2>
+                <div id="rw-body"></div>
+                <button id="rw-main" class="btn-primary"></button><br>
+                <button id="rw-map" class="btn-primary btn-sec">Volver al mapa</button>
+            </div>
+        </div>
+
+        <!-- Pantalla: Minijuego Space Path -->
+        <div id="game-canvas-screen" class="screen">
+           <div class="navbar-game">
+                <h2>Space Path </h2>
+                <span id="game-timer" class="game-timer">Tiempo: 50s</span>
+                <button id="btn-exit-game" class="nav-btn-small">Salir</button>
+            </div>
+
+            <p id="game-msg"></p>
+            <canvas id="gameCanvas" width="500" height="300"></canvas>
+            <p class="hint">up arriba · down abajo · left izquierda · right derecha · diagonal-up-right ↗</p>
+
+            <div class="game-controls">
+                <div class="toggle-container">
+                    <label>
+                        <input type="checkbox" id="toggle-input-mode">
+                        Usar botones
+                    </label>
+                </div>
+                <!-- Modo Escribir -->
+                <div id="text-input-mode" class="input-area">
+                    <input type="text" id="command-input" placeholder="Ej: up, right 2, diagonal-up-right" autocomplete="off">
+                    <button id="btn-fire-text" class="btn-primary">¡Lanzar!</button>
+                </div>
+                <!-- Modo Botones -->
+                <div id="btn-input-mode" class="input-area hidden">
+                    <div class="pad-direcciones">
+                        <button class="dir-btn" data-dir="diagonal-up-left">&nwarr;</button>
+                        <button class="dir-btn" data-dir="up">&uarr;</button>
+                        <button class="dir-btn" data-dir="diagonal-up-right">&nearr;</button>
+                        <button class="dir-btn" data-dir="left">&larr;</button>
+                        <button class="dir-btn btn-fire" id="btn-fire-pad">Lanzar</button>
+                        <button class="dir-btn" data-dir="right">&rarr;</button>
+                        <button class="dir-btn" data-dir="diagonal-down-left">&swarr;</button>
+                        <button class="dir-btn" data-dir="down">&darr;</button>
+                        <button class="dir-btn" data-dir="diagonal-down-right">&searr;</button>
+                    </div>
+                    <p id="comando-actual" class="comando-texto">Trayectoria: </p>
+                    <button id="btn-clear-pad" class="nav-btn-small">Borrar</button>
+                </div>
+            </div>
+        </div>
+        <!-- Pantalla: Word Match -->
+        <div id="wordmatch-screen" class="screen">
+            <div class="navbar-game">
+                <h2>Word Match </h2>
+                <button id="btn-exit-wordmatch" class="nav-btn-small">Salir</button>
+            </div>
+            <p id="wm-stats" class="comando-texto"></p>
+            <div id="wm-grid" class="wm-grid"></div>
+            <p id="wm-msg" class="feedback"></p>
+        </div>
+
+        <!-- Pantalla: Bubble Pop -->
+        <div id="bubblepop-screen" class="screen">
+            <div class="navbar-game">
+                <h2>Bubble Pop </h2>
+                <button id="btn-exit-bubblepop" class="nav-btn-small">Salir</button>
+            </div>
+            <p id="bp-stats" class="comando-texto"></p>
+            <p id="bp-prompt"></p>
+            <canvas id="bpCanvas" width="500" height="350"></canvas>
+            <p id="bp-msg" class="feedback"></p>
+        </div>
+
+        <!-- Pantalla: Final Sentence -->
+        <div id="finalsentence-screen" class="screen">
+            <div class="navbar-game">
+                <h2>Final Sentence</h2>
+                <span id="fs-time" class="game-timer"></span>
+                <button id="btn-exit-finalsentence" class="nav-btn-small">Salir</button>
+            </div>
+            <p id="fs-stats" class="comando-texto"></p>
+            <div class="progress"><div id="fs-bar"></div></div>
+            <h3 id="fs-sentence"></h3>
+            <div id="fs-options"></div>
+            <p id="fs-msg" class="feedback"></p>
+            <button id="fs-again" class="btn-primary hidden">Jugar de nuevo</button>
+        </div>
+
+        <!-- Pantalla: Listening Quiz -->
+        <div id="listening-screen" class="screen">
+            <div class="navbar-game">
+                <h2>Listening Quiz</h2>
+                <button id="btn-exit-listening" class="nav-btn-small">Salir</button>
+            </div>
+            <p id="lq-stats" class="comando-texto"></p>
+            <h3 id="lq-prompt"></h3>
+            <button id="lq-listen" class="btn-primary">Escuchar de nuevo</button>
+            <div id="lq-options"></div>
+            <p id="lq-msg" class="feedback"></p>
+            <button id="lq-again" class="btn-primary hidden">Jugar de nuevo</button>
+        </div>
+
+        <!-- Pantalla: Hangman -->
+        <div id="hangman-screen" class="screen">
+            <div class="navbar-game">
+                <h2>Hangman</h2>
+                <button id="btn-exit-hangman" class="nav-btn-small">Salir</button>
+            </div>
+            <p id="hm-stats" class="comando-texto"></p>
+            <canvas id="hmCanvas" width="220" height="240"></canvas>
+            <p id="hm-hint" class="comando-texto"></p>
+            <p id="hm-word"></p>
+            <div id="hm-keys" class="hm-keys"></div>
+            <p id="hm-msg" class="feedback"></p>
+            <button id="hm-again" class="btn-primary hidden">Jugar de nuevo</button>
+        </div>
+
+    </div>
+
+    <p id="load-error" class="load-error hidden"></p>
+    <script>
+        // Carga los módulos en orden. Los busca en js/ y, si no existen ahí, junto a index.html.
+        (function () {
+            const modulos = ['core', 'niveles', 'space-path', 'word-match', 'bubble-pop',
+                             'final-sentence', 'listening-quiz', 'hangman', 'pruebas'];
+            const carpetas = ['js/', ''];
+
+            function mostrarError(nombre) {
+                const aviso = document.getElementById('load-error');
+                aviso.textContent = 'No se pudo cargar "' + nombre + '.js". Revisa que la carpeta js/ esté junto a index.html.';
+                aviso.classList.remove('hidden');
+            }
+
+            function cargar(i, c) {
+                if (i >= modulos.length) return;
+                const s = document.createElement('script');
+                s.src = carpetas[c] + modulos[i] + '.js';
+                s.onload = () => cargar(i + 1, 0);
+                s.onerror = () => {
+                    s.remove();
+                    if (c + 1 < carpetas.length) cargar(i, c + 1);
+                    else mostrarError(modulos[i]);
+                };
+                document.body.appendChild(s);
+            }
+            cargar(0, 0);
+        })();
+    </script>
+</body>
+</html>
